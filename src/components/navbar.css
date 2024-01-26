@@ -3,45 +3,32 @@
     padding: 0px;
   }
   
+
  
-  .navbar-toggler{
-    color: white;
-    
-  }
-  
-  .navbar-brand{
-    position: relative;
-    margin: 0px;
-    
-    
-  }
-  .collapse{
-    
-    text-align: center;
-    justify-content: center;
-    margin-right: 200px;
-    color: white;
-}
+
 .navlogo {
   height: 50px;
+ 
   vertical-align: middle;
   border: 2px solid white;
 }
 
-.collapse.navbar-nav.nav-item.btn{
-
-  color: white;
+.collapse.navbar-collapse{
+  margin: 10px 0px;
+  padding: 0%;
+ 
 }
 
 .nav-link{
-  border: 1px solid black;
+  /* border: 1px solid black; */
   margin: 0px 10px;
   padding: 0%;
-  display: inline-block;
+  
   cursor: pointer;
   color: black;
   
 }
+
 
 
 .btn-sm:hover,

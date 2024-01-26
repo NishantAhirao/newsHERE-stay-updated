@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import NewsItems from './NewsItems';
 import PropTypes from 'react';
 import Spinner from './spinner';
+import './news.css';
 
 const News = (props) => {
   const [data, setData] = useState([]);
@@ -14,7 +15,7 @@ const News = (props) => {
   const fetchData = async (page) => {
     try {
       const response = await fetch(
-        `https://newsapi.org/v2/top-headlines?country=${props.country}&category=${props.category}&apiKey=8a65647f97fa4be89fec167863da8ee0&page=${page}&pageSize=${props.pageSize}`
+        `https://newsapi.org/v2/top-headlines?country=${props.country}&category=${props.category}&apiKey=13ea6676bbd74b9295d29e154e2a7fb9&page=${page}&pageSize=${props.pageSize}`
       );
       
       if (!response.ok) {
@@ -68,8 +69,8 @@ const News = (props) => {
   }
 
   return (
-    <div className='container my-3'>
-      <h2 className='text-center'>newsHERE - STAY UPDATED</h2>
+    <div className='container my-3 '>
+      <h2 className='text-center' style={{color:'black', backgroundColor:'white'}}>newsHERE - STAY UPDATED</h2>
 
       <div className='row'>
         {data.map((elements, index) => (
