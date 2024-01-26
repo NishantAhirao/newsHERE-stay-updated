@@ -14,7 +14,7 @@ const News = (props) => {
   const fetchData = async (page) => {
     try {
       const response = await fetch(
-        `https://newsapi.org/v2/top-headlines?country=${props.country}&category=${props.category}&apiKey=43b051e40381433c9a5034846efec749&page=${page}&pageSize=${props.pageSize}`
+        `https://newsapi.org/v2/top-headlines?country=${props.country}&category=${props.category}&apiKey=8a65647f97fa4be89fec167863da8ee0&page=${page}&pageSize=${props.pageSize}`
       );
       
       if (!response.ok) {

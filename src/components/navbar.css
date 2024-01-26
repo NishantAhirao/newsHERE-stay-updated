@@ -3,13 +3,10 @@
     padding: 0px;
   }
   
-  .container-fluid{
-    background-color: rgb(0, 0, 0);
-
-  }
+ 
   .navbar-toggler{
     color: white;
-    border: ;
+    
   }
   
   .navbar-brand{
@@ -36,8 +33,7 @@
   color: white;
 }
 
-.btn-light{
-  width: 120px;
+.nav-link{
   border: 1px solid black;
   margin: 0px 10px;
   padding: 0%;
@@ -54,10 +50,12 @@
   background-color: black;
   color: white;
 }
-.navbar .nav-item .nav-link.active { /* Increased specificity */
+.nav-link.active { /* Increased specificity */
   background-color: black;
   color: white;
 }
+
+
 
 
 
