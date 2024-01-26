@@ -1,0 +1,92 @@
+.navbar{
+    margin: 0px;
+    padding: 0px;
+  }
+  
+  .container-fluid{
+    background-color: rgb(0, 0, 0);
+
+  }
+  .navbar-toggler{
+    color: white;
+    border: ;
+  }
+  
+  .navbar-brand{
+    position: relative;
+    margin: 0px;
+    
+    
+  }
+  .collapse{
+    
+    text-align: center;
+    justify-content: center;
+    margin-right: 200px;
+    color: white;
+}
+.navlogo {
+  height: 50px;
+  vertical-align: middle;
+  border: 2px solid white;
+}
+
+.collapse.navbar-nav.nav-item.btn{
+
+  color: white;
+}
+
+.btn-light{
+  width: 120px;
+  border: 1px solid black;
+  margin: 0px 10px;
+  padding: 0%;
+  display: inline-block;
+  cursor: pointer;
+  color: black;
+  
+}
+
+
+.btn-sm:hover,
+.nav-link:hover {
+  border: 1px solid white;
+  background-color: black;
+  color: white;
+}
+.navbar .nav-item .nav-link.active { /* Increased specificity */
+  background-color: black;
+  color: white;
+}
+
+
+
+
+
+/* .nav-link{
+  margin:10px;
+  /* border-radius: 100px; */
+  /* color: black;
+  border: 1px solid black;
+}
+
+.nav-link:hover{
+  color: white;
+  background-color: black;
+
+}
+
+.nav-link:visited{
+  color: white;
+  background-color: black;
+
+}
+.nav-tem:active{
+  background-color: black;
+}  */
+
+
+
+
+
+
