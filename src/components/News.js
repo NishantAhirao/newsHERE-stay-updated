@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import NewsItems from './NewsItems';
-import PropTypes from 'prop-types'; // Changed from 'react' to 'prop-types'
+import PropTypes from 'prop-types'; // Correct import for PropTypes
 import Spinner from './spinner';
 import './news.css';
 
@@ -10,19 +10,19 @@ const News = (props) => {
   const [error, setError] = useState(null);
   const [currentPage, setCurrentPage] = useState(1);
   const [hasMore, setHasMore] = useState(true);
-  
+
   const fetchData = useCallback(async (page) => {
     try {
       const response = await fetch(
         `https://newsapi.org/v2/top-headlines?country=${props.country}&category=${props.category}&apiKey=13ea6676bbd74b9295d29e154e2a7fb9&page=${page}&pageSize=${props.pageSize}`
       );
-      
+
       if (!response.ok) {
         throw new Error(`HTTP error! Status: ${response.status}`);
       }
-      
+
       const result = await response.json();
-      
+
       if (page === 1) {
         setData(result.articles); // Clear data for initial fetch
       } else {
@@ -41,17 +41,17 @@ const News = (props) => {
     fetchData(currentPage);
   }, [currentPage, fetchData]);
 
-  const handleScroll = () => {
+  const handleScroll = useCallback(() => {
     const { scrollTop, scrollHeight, clientHeight } = document.documentElement;
     if (scrollTop + clientHeight >= scrollHeight - 50 && hasMore) {
       setCurrentPage((prevPage) => prevPage + 1);
     }
-  };
+  }, [hasMore]);
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [hasMore]);
+  }, [handleScroll]);
 
   if (loading) {
     props.setProgress(5);
